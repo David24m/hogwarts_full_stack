@@ -5,7 +5,6 @@ require_relative('./models/student.rb')
 
 #INDEX
 get '/hogwarts' do
-  @students = Student.all
   erb(:index)
 end
 
@@ -20,4 +19,11 @@ post '/hogwarts' do
   @students = Student.new(params)
   @students.save
   erb(:create)
+end
+
+# READ
+
+get '/hogwarts/all' do
+  @students = Student.all
+  erb(:all)
 end
