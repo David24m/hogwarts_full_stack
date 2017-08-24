@@ -1,4 +1,4 @@
-<p>List of students:</p>
+<h1>List of students:</h1>
 
 <% for student in @students do %>
 
@@ -6,7 +6,17 @@
 <p>Last name: <%= student.last_name %></p>
 <p>House: <%= student.house.name%></p>
 <p>Age: <%= student.age %></p>
+
+<form action="/hogwarts/<%= student.id %>/edit">
+  <input type="submit" value="Edit student details">
+</form>
+
+<form action="/hogwarts/<%= student.id %>/delete" method="post">
+  <input type="submit" value="Unenroll student">
+</form>
+
 <hr/>
+
 <% end %>
 
 <p>May the force be with you!</p>

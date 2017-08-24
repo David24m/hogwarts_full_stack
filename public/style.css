@@ -1,0 +1,18 @@
+li{
+  display: inline;
+  padding: 100px;
+}
+
+html{
+  text-align: center;
+  background-color: indianred;
+}
+
+img{
+  padding: 100px;
+}
+
+h1{
+  font-family: verdana;
+  /*font-style: italic;*/
+}

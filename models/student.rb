@@ -50,10 +50,10 @@ class Student
     SqlRunner.run(sql, values)
   end
 
-  def update
+  def update()
     sql = 'UPDATE students SET (first_name, last_name, age, house_id) =
       ($1, $2, $3, $4) WHERE id = $5;'
-    values = [@first_name, @last_name, @age, @id, @house_id]
+    values = [@first_name, @last_name, @age, @house_id, @id]
     SqlRunner.run(sql, values)
   end
 
